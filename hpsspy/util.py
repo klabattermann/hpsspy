@@ -290,7 +290,7 @@ def hsi(*args, **kwargs):
     """
     path = get_hpss_dir()
     ofile = os.path.join(get_tmpdir(**kwargs), 'hsi.txt')
-    base_command = [os.path.join(path, 'hsi'), '-O', ofile, '-s', 'archive']
+    base_command = [os.path.join(path, 'hsi'), '-O', ofile]
     command = base_command + list(args)
     status = call(command)
     with open(ofile) as o:
